@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import VITE_OMDB_API_KEY from "/.env";
+const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
 
 import MovieList from '../component/MovieList';
 import img from '../images/1.jpg';
@@ -24,7 +24,7 @@ function MovieHome() {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://www.omdbapi.com/?apikey=${VITE_OMDB_API_KEY}&s=${query}`,
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`,
       );
       const data = await res.json();
       console.log(data);
