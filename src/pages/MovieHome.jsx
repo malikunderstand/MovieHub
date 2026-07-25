@@ -24,7 +24,7 @@ function MovieHome() {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_OMDB_API_KEY}&s=${query}`,
+        `https://www.omdbapi.com/?apikey=${VITE_OMDB_API_KEY}&s=${query}`,
       );
       const data = await res.json();
       console.log(data);
