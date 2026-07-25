@@ -23,7 +23,7 @@ function MovieHome() {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=b30a7c6f&s=${query}`,
+        `http://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${query}`,
       );
       const data = await res.json();
       console.log(data);
