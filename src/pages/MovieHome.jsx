@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
+const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 import MovieList from '../component/MovieList';
 import img from '../images/1.jpg';
