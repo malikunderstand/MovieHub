@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import "/.env";
 
 import MovieList from '../component/MovieList';
 import img from '../images/1.jpg';
