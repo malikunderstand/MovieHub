@@ -6,12 +6,13 @@ function Scifi() {
   const [movie, setMovie] = useState([]);
   const [loading, setLoading] = useState(false);
   const search = useRef();
-
+  const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
+  
   const fetchMovie = async (query) => {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=b30a7c6f&s=${query}`,
+       `https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`,
       );
       const data = await res.json();
       console.log(data);
