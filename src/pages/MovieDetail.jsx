@@ -5,7 +5,8 @@ function MovieDetail() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
-
+ const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
+  
   useEffect(() => {
     async function getMovie() {
       try {
